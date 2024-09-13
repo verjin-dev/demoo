@@ -1,0 +1,376 @@
+======================================================================
+ERROR: test_1_inventory_get_success (inventoryapp.tests.AppTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/tests.py", line 7, in test_1_inventory_get_success
+    res=self.client.get('/inventory/items/')
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 927, in get
+    response = super().get(path, data=data, secure=secure, headers=headers, **extra)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 457, in get
+    return self.generic(
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 609, in generic
+    return self.request(**r)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 891, in request
+    self.check_exception(response)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 738, in check_exception
+    raise exc_value
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/views.py", line 24, in get
+    items = Items.objects.all()
+NameError: name 'Items' is not defined
+-------------------- >> begin captured logging << --------------------
+django.request: ERROR: Internal Server Error: /inventory/items/
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/views.py", line 24, in get
+    items = Items.objects.all()
+NameError: name 'Items' is not defined
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: test_2_inventory_post_success (inventoryapp.tests.AppTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/tests.py", line 13, in test_2_inventory_post_success
+    res=self.client.post('/inventory/items/',data={'name':'shirt','category':'top wear','price':700,'discount':20,'quantity':2,'barcode':123456})
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 948, in post
+    response = super().post(
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 482, in post
+    return self.generic(
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 609, in generic
+    return self.request(**r)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 891, in request
+    self.check_exception(response)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 738, in check_exception
+    raise exc_value
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/views.py", line 29, in post
+    serializer = ItemSerializer(dat=request.data)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'dat'
+-------------------- >> begin captured logging << --------------------
+django.request: ERROR: Internal Server Error: /inventory/items/
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/views.py", line 29, in post
+    serializer = ItemSerializer(dat=request.data)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'dat'
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: test_3_inventory_delete_success (inventoryapp.tests.AppTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/tests.py", line 20, in test_3_inventory_delete_success
+    res=self.client.post('/inventory/items/',data={'name':'shirt','category':'top wear','price':700,'discount':20,'quantity':2,'barcode':123456})
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 948, in post
+    response = super().post(
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 482, in post
+    return self.generic(
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 609, in generic
+    return self.request(**r)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 891, in request
+    self.check_exception(response)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 738, in check_exception
+    raise exc_value
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/views.py", line 29, in post
+    serializer = ItemSerializer(dat=request.data)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'dat'
+-------------------- >> begin captured logging << --------------------
+django.request: ERROR: Internal Server Error: /inventory/items/
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/views.py", line 29, in post
+    serializer = ItemSerializer(dat=request.data)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'dat'
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: test_4_inventory_post_error (inventoryapp.tests.AppTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/tests.py", line 27, in test_4_inventory_post_error
+    res=self.client.post('/inventory/items/',data={'name':'shirt','category':'top wear','price':700,'discount':20,'quantity':2,'barcode':123456})
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 948, in post
+    response = super().post(
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 482, in post
+    return self.generic(
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 609, in generic
+    return self.request(**r)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 891, in request
+    self.check_exception(response)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 738, in check_exception
+    raise exc_value
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/views.py", line 29, in post
+    serializer = ItemSerializer(dat=request.data)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'dat'
+-------------------- >> begin captured logging << --------------------
+django.request: ERROR: Internal Server Error: /inventory/items/
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/views.py", line 29, in post
+    serializer = ItemSerializer(dat=request.data)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'dat'
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: test_5_inventory_get_sort_success (inventoryapp.tests.AppTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/tests.py", line 35, in test_5_inventory_get_sort_success
+    res=self.client.post('/inventory/items/',data={'name':'shirt','category':'top wear','price':700,'discount':20,'quantity':2,'barcode':123456})
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 948, in post
+    response = super().post(
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 482, in post
+    return self.generic(
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 609, in generic
+    return self.request(**r)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 891, in request
+    self.check_exception(response)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 738, in check_exception
+    raise exc_value
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/views.py", line 29, in post
+    serializer = ItemSerializer(dat=request.data)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'dat'
+-------------------- >> begin captured logging << --------------------
+django.request: ERROR: Internal Server Error: /inventory/items/
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/views.py", line 29, in post
+    serializer = ItemSerializer(dat=request.data)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'dat'
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: test_6_inventory_get_query_category_success (inventoryapp.tests.AppTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/tests.py", line 44, in test_6_inventory_get_query_category_success
+    res=self.client.post('/inventory/items/',data={'name':'shirt','category':'top wear','price':700,'discount':20,'quantity':2,'barcode':123456})
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 948, in post
+    response = super().post(
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 482, in post
+    return self.generic(
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 609, in generic
+    return self.request(**r)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 891, in request
+    self.check_exception(response)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/test/client.py", line 738, in check_exception
+    raise exc_value
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/views.py", line 29, in post
+    serializer = ItemSerializer(dat=request.data)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'dat'
+-------------------- >> begin captured logging << --------------------
+django.request: ERROR: Internal Server Error: /inventory/items/
+Traceback (most recent call last):
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/labuser/Desktop/Project/wings-t4-miniproject-inventory-api/inventoryapp/views.py", line 29, in post
+    serializer = ItemSerializer(dat=request.data)
+  File "/home/labuser/.local/lib/python3.8/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'dat'
+--------------------- >> end captured logging << ---------------------
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.304s
